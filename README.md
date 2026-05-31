@@ -4,7 +4,7 @@
 </div>
 
 <p align="center">
-<img src="workflow.png?raw=true">
+<img src="Fig2.pdf?raw=true">
 </p>
 
 
