@@ -58,6 +58,7 @@ python inference.py -x_test ./path_fold_0/x_val_0.npy -y_test ./path_fold_0/y_va
 The code used to generate the saliency maps is in: 
 ```bash
 ├── code/saliency_maps.py
+├── code/compress_saliency_maps.py
 ```
 First, generate saliency maps for each test sample per folder:
 
