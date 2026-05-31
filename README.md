@@ -33,7 +33,7 @@ If you find our framework, code, or paper useful to your research, please cite u
 We use the state-of-the-art simple fully convolutional network (SFCN) (doi: 10.1016/J.MEDIA.2020.101871) as our deep learning architecture. The Adam optimizer with an initial learning rate of 0.01, with exponential decay applied after every epoch, and batch size 64 was used during training. The best model (lowest binary cross-entropy testing loss) was saved for evaluation after early stopping with a patience of 10 epochs. 
 The code used is in: 
 ```bash
-├── code/sfcn_2D_no_spatial.py
+├── sfcn_2D_no_spatial.py
 
 ```
 To run this code, you will need to change the params variable to match the size of your image data and to read the correct column for your lables. After you update the file, you can save and run:
@@ -45,7 +45,7 @@ python sfcn_2D_no_spatial.py -x_train ./path_fold_0/x_train_0.npy -y_train ./pat
 ## Evaluation
 The code used for evaluation is in: 
 ```bash
-├── code/inference.py
+├── inference.py
 ```
 To run the code:
 
@@ -57,8 +57,8 @@ python inference.py -x_test ./path_fold_0/x_val_0.npy -y_test ./path_fold_0/y_va
 ## Saliency maps
 The code used to generate the saliency maps is in: 
 ```bash
-├── code/saliency_maps.py
-├── code/compress_saliency_maps.py
+├── saliency_maps.py
+├── compress_saliency_maps.py
 ```
 First, generate saliency maps for each test sample per folder:
 
