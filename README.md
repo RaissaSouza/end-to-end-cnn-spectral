@@ -28,7 +28,18 @@ If you find our framework, code, or paper useful to your research, please cite u
 **Results**: Our results demonstrate that AD-related signatures can indeed be detected in normal-appearing brain regions. Experiments revealed that model performance depends on input dimensions, training set size, and the preprocessing kernel size. The optimal configuration used 1000×32 input, 9,000 training samples, and a 3×3 kernel, achieving >95% accuracy, sensitivity, specificity, F1-score, and area under the receiver operating characteristic curve. Importantly, no mice were misclassified, and saliency analysis indicated that a broad range of spectral fluorescence wavelengths contributed to the model’s decisions.
 **Conclusions**: These findings highlight the potential of DL–based analysis of spectral fluorescence data to enable earlier detection of AD-related changes, supporting a shift toward a more proactive strategy for biomarker discovery.
   
+## 10 fold data split and numpy array files for training
+First, download the preprocessed data at _https://drive.google.com/drive/folders/1p7FfxVcH5iuIi9olKLcywBEsX7T8slsx?usp=sharing_. Then change **insize**, **path to save** the data, and the **path to load the preprocessed data** in the following code to generate the splits and training files. 
+The code used is in: 
+```bash
+├── generate_data_splits_numpy_files.py
 
+```
+To run this code, you can save and run:
+```
+python generate_data_splits_numpy_files.py
+
+```
 ## AD classifier
 We use the state-of-the-art simple fully convolutional network (SFCN) (doi: 10.1016/J.MEDIA.2020.101871) as our deep learning architecture. The Adam optimizer with an initial learning rate of 0.01, with exponential decay applied after every epoch, and batch size 64 was used during training. The best model (lowest binary cross-entropy testing loss) was saved for evaluation after early stopping with a patience of 10 epochs. 
 The code used is in: 
